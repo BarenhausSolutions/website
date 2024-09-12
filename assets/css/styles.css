@@ -1,0 +1,324 @@
+/* General Styling ****************************************************************/
+* {
+    box-sizing: border-box; /* Ensures padding and borders are included in width */
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #333;
+    color: #333;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+section {
+    max-width: 100%;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* Typography and Text Alignment */
+h1, h2, p {
+    text-align: center;
+    margin: 0;
+}
+
+p {
+    font-weight: 300;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Header */
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background: transparent;
+    color: white;
+    z-index: 10;
+}
+
+header .logo img {
+    max-width: 200px;
+}
+
+header nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+    gap: 30px;
+}
+
+header nav ul li a {
+    color: white;
+    font-size: 1.1em;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    background-color: black;
+    color: white;
+    padding: 50px 5%;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+footer h2 {
+    font-size: 2.5em;
+}
+
+/* Home *************************************************************************************/
+/* Hero Section */
+.hero {
+    position: relative;
+    background-image: url('/assets/images/hero-image.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+    padding: 20% 5% 10%;
+    text-align: center;
+    background-color: #333;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    font-size: 3.25vw;
+    position: relative;
+    z-index: 2;
+    max-width: 70%;
+    margin: 0 auto;
+    line-height: 1.4;
+}
+
+/* Image Grid for Home Page */
+.image-grid {
+    display: flex;
+    justify-content: space-around;
+    gap: 1%;
+    margin: 5% auto;
+    width: 90%;
+    max-width: 1200px;
+    background-color: #333;
+}
+
+.image-item img {
+    width: 100%;
+    height: auto;
+    max-width: 90%;
+}
+
+.expertise p {
+    font-size: 2vw;
+    width: 85%;
+    margin: 0 auto;
+    line-height: 2;
+    color: #ffffff;
+    padding-top: 25px;
+    padding-bottom: 50px;
+}
+
+/* Services Section *********************************************************/
+/* Hero Section - Services */
+.hero-services {
+    position: relative;
+    background-image: url('/assets/images/services-hero.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 150px 20px;
+    text-align: center;
+  }
+  
+  .hero-services::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.25);
+    z-index: 1; 
+  }
+  
+  .hero-services h1 {
+    position: relative;
+    z-index: 2;
+    font-size: 3vw;
+    margin-top: 0;
+  }
+
+.services {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px;
+    background-color: #333;
+    color: white;
+    width: 90%;
+    max-width: 1200px;
+    padding: 50px;
+    margin: 0 auto;
+}
+
+.service {
+    text-align: center;
+    padding: 20px;
+}
+
+.service h2 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.service p {
+    font-size: 1em;
+    margin-bottom: 15px;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+ul li {
+    margin-bottom: 5px;
+    font-weight: 300;
+}
+
+/* Contact Form *********************************************************************************/
+/* Hero Section - Contact */
+.hero-contact {
+    position: relative;
+    background-image: url('/assets/images/contact-hero.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding-top: 200px;
+    padding-bottom: 50px;
+    text-align: center;
+    margin: 0 auto;
+    z-index: 1;
+}
+
+.hero-contact::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* 50% opacity black overlay */
+    z-index: 1; /* Ensure it's behind the text */
+}
+
+.hero-contact h1 {
+    position: relative; /* Keep text above overlay */
+    z-index: 2;
+    font-size: 3vw;
+    margin-top: 0;
+}
+
+/* Contact Form Styling */
+.contact {
+    position: relative;
+    width: 90%;
+    max-width: 1200px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    z-index: 2;
+    margin: 0 auto;
+}
+
+.contact p {
+    color: white;
+    font-size: 1.2em;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact form label {
+    font-weight: bold;
+    color: white;
+}
+
+.contact form input,
+.contact form select,
+.contact form textarea {
+    padding: 10px;
+    font-size: 1em;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.contact form textarea {
+    height: 150px;
+}
+
+.contact form input[type="submit"] {
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact form input[type="submit"]:hover {
+    background-color: #555;
+}
+
+.contact-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 1.3em;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+.contact-button:hover {
+    background-color: #f1f1f1;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 768px) {
+    .image-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero h1 {
+        font-size: 6vw;
+    }
+
+    .services {
+        grid-template-columns: 1fr;
+    }
+
+    .contact {
+        padding: 20px;
+    }
+}
